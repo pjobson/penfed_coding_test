@@ -2,7 +2,7 @@ body {
 	background-color: #cccccc;
 }
 
-#weatherBox {
+#pf-WeatherBox {
 	position: absolute;
 	margin: auto;
 	top: 0;
@@ -13,17 +13,17 @@ body {
 	background-color: orange;
 }
 
-.well-lg {
+#pf-WeatherBox .well-lg {
 	border-radius: 20px;
 }
 
-.drop-shadow {
+#pf-WeatherBox .drop-shadow {
 	-webkit-box-shadow: 5px 5px 5px #999999;
 	box-shadow: 5px 5px 5px #999999;
 }
 
 
-.row-eq-height {
+#pf-WeatherBox .row-eq-height {
 	display:  -webkit-box;
 	display: -webkit-flex;
 	display:  -ms-flexbox;
@@ -31,35 +31,35 @@ body {
 }
 
 
-#widget {
+#pf-WeatherBox .pf-Widget {
 	border: 1px solid #b2b2b2;
 	background-color: white;
 }
 
-#cityState {
+#pf-WeatherBox .pf-CityState {
 	font-size: 2.5em;
 	background-color: pink;
 }
 
-#temperature {
+#pf-WeatherBox .pf-Temperature {
 	font-size: 6em;
 	background-color: lavender;
 }
 
-#icon {
+#pf-WeatherBox .pf-Icon {
 	background-color: palegreen;
 	padding-top: 20px;
 }
 
-#forecast {
+#pf-WeatherBox .pf-Forecast {
 	background-color: lightblue;
 }
 
-#forecast > div {
+#pf-WeatherBox .pf-Forecast > div {
 	border-right: 1px solid silver;
 	padding: 10px 0;
 }
 
-#forecast > div:last-child {
+#pf-WeatherBox .pf-Forecast > div:last-child {
 	border-right: 0;
 }

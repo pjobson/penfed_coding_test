@@ -21,6 +21,10 @@ I don't think I'm interviewing at Cvent, I interviewed there in the past and was
         }
     }
 
+## Internet Explorer 9 Requirement
+
+IE9 end of life was January 12, 2016.
+
 ### Modifed URL returns useful set
 
 	http://localhost:8081/yahooWeather?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22nome%2C%20ak%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys

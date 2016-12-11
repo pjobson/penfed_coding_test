@@ -18,13 +18,13 @@ var pfWeather = {
 			var forecast = cJSON.item.forecast;
 			forecast.length = 5; // Truncate arrray to 5 elements
 
-			$('#cityState').html(city +', '+ state);
-			$('#temperature').html(currTemp +'&deg;'+ tempUnit);
-			$('#iconImage').html($(conditionImg));
-			$('#iconCondition').html(conditionText);
+			$('.pf-CityState').html(city +', '+ state);
+			$('.pf-Temperature').html(currTemp +'&deg;'+ tempUnit);
+			$('.pf-IconImage').html($(conditionImg));
+			$('.pf-IconCondition').html(conditionText);
 
 			forecast.forEach(function(fcdata,idx) {
-				var div = $('#forecast > div:eq('+ idx +')');
+				var div = $('.pf-Forecast > div:eq('+ idx +')');
 				$(div).find('strong:eq(0)').html(fcdata.day);
 				$(div).find('.high').html(fcdata.high);
 				$(div).find('.low').html(fcdata.low);
