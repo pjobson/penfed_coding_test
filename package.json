@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/pjobson/penfed_coding_test#readme",
   "dependencies": {
+    "express": "^4.14.0",
     "express-http-proxy": "^0.10.1",
     "geoip-lite": "^1.1.8",
     "nodemon": "^1.11.0",
-    "request": "^2.79.0",
+    "path": "^0.12.7",
+    "querystring": "^0.2.0",
     "request-promise": "^4.1.1"
   }
 }
