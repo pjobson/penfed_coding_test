@@ -6,6 +6,10 @@ Cvent UI Candidate Tech Challenge
 
 I don't think I'm interviewing at Cvent, I interviewed there in the past and was not interested in working for them.
 
+## Internet Explorer 9 Requirement
+
+IE9 end of life was January 12, 2016.
+
 ## API
 
 ### Supplied API call returns invalid response.
@@ -21,9 +25,6 @@ I don't think I'm interviewing at Cvent, I interviewed there in the past and was
         }
     }
 
-## Internet Explorer 9 Requirement
-
-IE9 end of life was January 12, 2016.
 
 ### Modifed URL returns useful set
 
