@@ -1,30 +1,48 @@
 # penfed_coding_test
 
+Although this is supposed to be a front-end excersise, I couldn't really help myself in making this an application, because it is far more interesting to write the whole thing rather than to just mess around with a tiny part.  Also the Y! API listed was not available, so I kind of felt I had to do this to make my "answer" to the test complete.
+
+## Run Me
+
+I'm using node v4.4.4, because that's what happened to be the last version I was using.
+
+    git clone git@github.com:pjobson/penfed_coding_test.git
+    npm install
+    node index.js
+
+Go to: http://localhost:8081
+
+I left debugging messages in the console so you can follow along as to what is going on.
+
 ## Stack
 
-Express & JQuery
+### Express & JQuery
 
-Basic page was built using Express to provide a proxy for the Yahoo Weather API and simple web server for the app.  Express app looks up users' external IP address then geolocates their City/State to provide to Yahoo's Weather API.  The API link provided was invalid and could not be used to meet the requirements, more information on this issue is below.
+Basic page was built using Express to provide a reverse proxy of sorts for the Yahoo Weather API and simple web server for the app.  Express app looks up users' external IP address then geolocates their City/State to provide to Yahoo's Weather API.  The API link provided was invalid and could not be used to meet the requirements, more information on this issue is below.
 
-JQuery 3.x is used to load the data into the HTML page.  As this is just a prototype it could be significantly improved by using a simple JQuery template or something similar.
+JQuery 3.x is used to load the data into the HTML page.
+
+As this is just a prototype it could be significantly improved by using a simple JQuery template or something similar.  A spinner could also be added while the data is being pulled from the AJAX request.
 
 ## Test Issues
 
 ### Test Title
 
-Cvent UI Candidate Tech Challenge
+**Cvent UI Candidate Tech Challenge**
 
-I don't think I'm interviewing at Cvent, I interviewed there in the past and was not interested in working for them.
+I don't think I'm interviewing at Cvent, I interviewed there in the past and was not interested in working for them for various reasons.  If I was in fact interviewing at Cvent, I feel there was a huge miscommunication ;)
 
 ### Internet Explorer 9 Requirement
 
-IE9 end of life was January 12, 2016.  I don't currently have a working VM, so I can't currently test for IE at all, QA can pick this up for me 😉
+IE9 end of life was January 12, 2016.  I don't currently have a working Windows VM, so I can't currently test for IE at all, QA can pick this up for me ;)
 
 ### API
 
 Supplied API call returns invalid response.
 
-	http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2222102%22&format=json
+    http://query.yahooapis.com/v1/public/yql
+        ?q=select%20item%20from%20weather.forecast%20where%20location%3D%2222102%22
+        &format=json
 
     {
         "query": {
@@ -42,9 +60,18 @@ I cannot find reference to the API provided in the requirements, Y! does provide
 
 https://developer.yahoo.com/weather/
 
-	http://localhost:8081/yahooWeather?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22nome%2C%20ak%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys
+    http://localhost:8081/yahooWeather
+        ?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22nome%2C%20ak%22)
+        &format=json
+        &env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys
 
-	"http://localhost:8081/yahooWeather?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="nome, ak")&format=json&env=store://datatables.org/alltableswithkeys"
+    http://localhost:8081/yahooWeather
+        ?q=
+            select * from weather.forecast
+            where woeid in
+            (select woeid from geo.places(1) where text="nome, ak")
+        &format=json
+        &env=store://datatables.org/alltableswithkeys
 
 Modified data set is unfortunately generated using the city/state combination rather than zip code.
 
