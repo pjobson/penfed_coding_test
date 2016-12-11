@@ -1,0 +1,26 @@
+{
+  "name": "penfed_coding_test",
+  "version": "1.0.0",
+  "description": "...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjobson/penfed_coding_test.git"
+  },
+  "author": "Paul Jobson",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/pjobson/penfed_coding_test/issues"
+  },
+  "homepage": "https://github.com/pjobson/penfed_coding_test#readme",
+  "dependencies": {
+    "express-http-proxy": "^0.10.1",
+    "geoip-lite": "^1.1.8",
+    "nodemon": "^1.11.0",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  }
+}

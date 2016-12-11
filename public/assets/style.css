@@ -1,0 +1,65 @@
+body {
+	background-color: #cccccc;
+}
+
+#weatherBox {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 285px;
+	background-color: orange;
+}
+
+.well-lg {
+	border-radius: 20px;
+}
+
+.drop-shadow {
+	-webkit-box-shadow: 5px 5px 5px #999999;
+	box-shadow: 5px 5px 5px #999999;
+}
+
+
+.row-eq-height {
+	display:  -webkit-box;
+	display: -webkit-flex;
+	display:  -ms-flexbox;
+	display:         flex;
+}
+
+
+#widget {
+	border: 1px solid #b2b2b2;
+	background-color: white;
+}
+
+#cityState {
+	font-size: 2.5em;
+	background-color: pink;
+}
+
+#temperature {
+	font-size: 6em;
+	background-color: lavender;
+}
+
+#icon {
+	background-color: palegreen;
+	padding-top: 20px;
+}
+
+#forecast {
+	background-color: lightblue;
+}
+
+#forecast > div {
+	border-right: 1px solid silver;
+	padding: 10px 0;
+}
+
+#forecast > div:last-child {
+	border-right: 0;
+}

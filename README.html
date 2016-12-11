@@ -1,0 +1,152 @@
+<h1 id="penfed_coding_test">penfed_coding_test</h1>
+<h2 id="test-title">Test Title</h2>
+<p>Cvent UI Candidate Tech Challenge</p>
+<p>I don&#39;t think I&#39;m interviewing at Cvent.</p>
+<h2 id="supplied-api-call-returns-invalid-response-">Supplied API call returns invalid response.</h2>
+<p><a href="http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2222102%22&amp;format=json">http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2222102%22&amp;format=json</a></p>
+<pre><code>{&quot;query&quot;:{&quot;count&quot;:0,&quot;created&quot;:&quot;2016-12-10T05:49:49Z&quot;,&quot;lang&quot;:&quot;en-US&quot;,&quot;results&quot;:null}}
+</code></pre><h2 id="modifed-url-returns-closer-set">Modifed URL returns closer set</h2>
+<pre><code>http://localhost:8081/yahooWeather?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22nome%2C%20ak%22)&amp;format=json&amp;env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys
+
+&quot;http://localhost:8081/yahooWeather?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=&quot;nome, ak&quot;)&amp;format=json&amp;env=store://datatables.org/alltableswithkeys&quot;
+</code></pre><p>Modified data set is unfortunately generated using the city/state combination rather than zip code.</p>
+<pre><code>{
+    &quot;query&quot;: {
+        &quot;count&quot;: 1,
+        &quot;created&quot;: &quot;2016-12-10T05:56:33Z&quot;,
+        &quot;lang&quot;: &quot;en-US&quot;,
+        &quot;results&quot;: {
+            &quot;channel&quot;: {
+                &quot;units&quot;: {
+                    &quot;distance&quot;: &quot;mi&quot;,
+                    &quot;pressure&quot;: &quot;in&quot;,
+                    &quot;speed&quot;: &quot;mph&quot;,
+                    &quot;temperature&quot;: &quot;F&quot;
+                },
+                &quot;title&quot;: &quot;Yahoo! Weather - Nome, AK, US&quot;,
+                &quot;link&quot;: &quot;http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2460286/&quot;,
+                &quot;description&quot;: &quot;Yahoo! Weather for Nome, AK, US&quot;,
+                &quot;language&quot;: &quot;en-us&quot;,
+                &quot;lastBuildDate&quot;: &quot;Fri, 09 Dec 2016 08:56 PM AKST&quot;,
+                &quot;ttl&quot;: &quot;60&quot;,
+                &quot;location&quot;: {
+                    &quot;city&quot;: &quot;Nome&quot;,
+                    &quot;country&quot;: &quot;United States&quot;,
+                    &quot;region&quot;: &quot; AK&quot;
+                },
+                &quot;wind&quot;: {
+                    &quot;chill&quot;: &quot;-13&quot;,
+                    &quot;direction&quot;: &quot;45&quot;,
+                    &quot;speed&quot;: &quot;11&quot;
+                },
+                &quot;atmosphere&quot;: {
+                    &quot;humidity&quot;: &quot;57&quot;,
+                    &quot;pressure&quot;: &quot;1028.0&quot;,
+                    &quot;rising&quot;: &quot;0&quot;,
+                    &quot;visibility&quot;: &quot;16.1&quot;
+                },
+                &quot;astronomy&quot;: {
+                    &quot;sunrise&quot;: &quot;11:47 am&quot;,
+                    &quot;sunset&quot;: &quot;4:1 pm&quot;
+                },
+                &quot;image&quot;: {
+                    &quot;title&quot;: &quot;Yahoo! Weather&quot;,
+                    &quot;width&quot;: &quot;142&quot;,
+                    &quot;height&quot;: &quot;18&quot;,
+                    &quot;link&quot;: &quot;http://weather.yahoo.com&quot;,
+                    &quot;url&quot;: &quot;http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif&quot;
+                },
+                &quot;item&quot;: {
+                    &quot;title&quot;: &quot;Conditions for Nome, AK, US at 08:00 PM AKST&quot;,
+                    &quot;lat&quot;: &quot;64.499474&quot;,
+                    &quot;long&quot;: &quot;-165.405792&quot;,
+                    &quot;link&quot;: &quot;http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2460286/&quot;,
+                    &quot;pubDate&quot;: &quot;Fri, 09 Dec 2016 08:00 PM AKST&quot;,
+                    &quot;condition&quot;: {
+                        &quot;code&quot;: &quot;31&quot;,
+                        &quot;date&quot;: &quot;Fri, 09 Dec 2016 08:00 PM AKST&quot;,
+                        &quot;temp&quot;: &quot;0&quot;,
+                        &quot;text&quot;: &quot;Clear&quot;
+                    },
+                    &quot;forecast&quot;: [{
+                        &quot;code&quot;: &quot;32&quot;,
+                        &quot;date&quot;: &quot;09 Dec 2016&quot;,
+                        &quot;day&quot;: &quot;Fri&quot;,
+                        &quot;high&quot;: &quot;1&quot;,
+                        &quot;low&quot;: &quot;-10&quot;,
+                        &quot;text&quot;: &quot;Sunny&quot;
+                    }, {
+                        &quot;code&quot;: &quot;32&quot;,
+                        &quot;date&quot;: &quot;10 Dec 2016&quot;,
+                        &quot;day&quot;: &quot;Sat&quot;,
+                        &quot;high&quot;: &quot;6&quot;,
+                        &quot;low&quot;: &quot;-3&quot;,
+                        &quot;text&quot;: &quot;Sunny&quot;
+                    }, {
+                        &quot;code&quot;: &quot;30&quot;,
+                        &quot;date&quot;: &quot;11 Dec 2016&quot;,
+                        &quot;day&quot;: &quot;Sun&quot;,
+                        &quot;high&quot;: &quot;15&quot;,
+                        &quot;low&quot;: &quot;4&quot;,
+                        &quot;text&quot;: &quot;Partly Cloudy&quot;
+                    }, {
+                        &quot;code&quot;: &quot;26&quot;,
+                        &quot;date&quot;: &quot;12 Dec 2016&quot;,
+                        &quot;day&quot;: &quot;Mon&quot;,
+                        &quot;high&quot;: &quot;23&quot;,
+                        &quot;low&quot;: &quot;16&quot;,
+                        &quot;text&quot;: &quot;Cloudy&quot;
+                    }, {
+                        &quot;code&quot;: &quot;23&quot;,
+                        &quot;date&quot;: &quot;13 Dec 2016&quot;,
+                        &quot;day&quot;: &quot;Tue&quot;,
+                        &quot;high&quot;: &quot;29&quot;,
+                        &quot;low&quot;: &quot;20&quot;,
+                        &quot;text&quot;: &quot;Breezy&quot;
+                    }, {
+                        &quot;code&quot;: &quot;23&quot;,
+                        &quot;date&quot;: &quot;14 Dec 2016&quot;,
+                        &quot;day&quot;: &quot;Wed&quot;,
+                        &quot;high&quot;: &quot;34&quot;,
+                        &quot;low&quot;: &quot;30&quot;,
+                        &quot;text&quot;: &quot;Breezy&quot;
+                    }, {
+                        &quot;code&quot;: &quot;5&quot;,
+                        &quot;date&quot;: &quot;15 Dec 2016&quot;,
+                        &quot;day&quot;: &quot;Thu&quot;,
+                        &quot;high&quot;: &quot;36&quot;,
+                        &quot;low&quot;: &quot;32&quot;,
+                        &quot;text&quot;: &quot;Rain And Snow&quot;
+                    }, {
+                        &quot;code&quot;: &quot;24&quot;,
+                        &quot;date&quot;: &quot;16 Dec 2016&quot;,
+                        &quot;day&quot;: &quot;Fri&quot;,
+                        &quot;high&quot;: &quot;36&quot;,
+                        &quot;low&quot;: &quot;30&quot;,
+                        &quot;text&quot;: &quot;Windy&quot;
+                    }, {
+                        &quot;code&quot;: &quot;23&quot;,
+                        &quot;date&quot;: &quot;17 Dec 2016&quot;,
+                        &quot;day&quot;: &quot;Sat&quot;,
+                        &quot;high&quot;: &quot;30&quot;,
+                        &quot;low&quot;: &quot;28&quot;,
+                        &quot;text&quot;: &quot;Breezy&quot;
+                    }, {
+                        &quot;code&quot;: &quot;28&quot;,
+                        &quot;date&quot;: &quot;18 Dec 2016&quot;,
+                        &quot;day&quot;: &quot;Sun&quot;,
+                        &quot;high&quot;: &quot;32&quot;,
+                        &quot;low&quot;: &quot;28&quot;,
+                        &quot;text&quot;: &quot;Mostly Cloudy&quot;
+                    }],
+                    &quot;description&quot;: &quot;&lt;![CDATA[&lt;img src=\&quot;http://l.yimg.com/a/i/us/we/52/31.gif\&quot;/&gt;\n&lt;BR /&gt;\n&lt;b&gt;Current Conditions:&lt;/b&gt;\n&lt;BR /&gt;Clear\n&lt;BR /&gt;\n&lt;BR /&gt;\n&lt;b&gt;Forecast:&lt;/b&gt;\n&lt;BR /&gt; Fri - Sunny. High: 1Low: -10\n&lt;BR /&gt; Sat - Sunny. High: 6Low: -3\n&lt;BR /&gt; Sun - Partly Cloudy. High: 15Low: 4\n&lt;BR /&gt; Mon - Cloudy. High: 23Low: 16\n&lt;BR /&gt; Tue - Breezy. High: 29Low: 20\n&lt;BR /&gt;\n&lt;BR /&gt;\n&lt;a href=\&quot;http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2460286/\&quot;&gt;Full Forecast at Yahoo! Weather&lt;/a&gt;\n&lt;BR /&gt;\n&lt;BR /&gt;\n(provided by &lt;a href=\&quot;http://www.weather.com\&quot; &gt;The Weather Channel&lt;/a&gt;)\n&lt;BR /&gt;\n]]&gt;&quot;,
+                    &quot;guid&quot;: {
+                        &quot;isPermaLink&quot;: &quot;false&quot;
+                    }
+                }
+            }
+        }
+    }
+}
+</code></pre><h3 id="current-y-weather-api-requires-an-api-key-">Current Y! Weather API Requires an API Key.</h3>
+<p><a href="https://developer.yahoo.com/weather/">https://developer.yahoo.com/weather/</a></p>
