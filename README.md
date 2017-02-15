@@ -1,4 +1,6 @@
-# penfed_coding_test
+# Pentagon Federal (PenFed) Coding Test
+
+If you interview at Pentagon Federal (PenFed) for a developer slot, they give you a coding test which they stole from Cvent.  The coding test requrements are invalid and cannot be completed without modifying them.  Here is my commentary on the test and solution.  I (thankfully) was not hired by PenFed.
 
 Although this is supposed to be a front-end excersise, I couldn't really help myself in making this an application, because it is far more interesting to write the whole thing rather than to just mess around with a tiny part.  Also the Y! API listed was not available, so I kind of felt I had to do this to make my "answer" to the test complete.
 
